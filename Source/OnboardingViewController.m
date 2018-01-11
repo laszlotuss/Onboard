@@ -174,6 +174,7 @@ static NSString * const kSkipButtonText = @"Skip";
         backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
         backgroundImageView.clipsToBounds = YES;
         backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
+        backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         [backgroundImageView setImage:self.backgroundImage];
         [self.view addSubview:backgroundImageView];
     }
@@ -185,6 +186,7 @@ static NSString * const kSkipButtonText = @"Skip";
     if (self.shouldMaskBackground) {
         backgroundMaskView = [[UIView alloc] initWithFrame:self.pageVC.view.frame];
         backgroundMaskView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:kBackgroundMaskAlpha];
+        backgroundMaskView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         [self.pageVC.view addSubview:backgroundMaskView];
     }
 
